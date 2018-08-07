@@ -1,0 +1,5 @@
+package com.fyts.common.core.config;
+
+public class MybatisPlusConfig {
+
+}

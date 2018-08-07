@@ -1,0 +1,5 @@
+package com.fyts.admin.modules.sys;
+
+public class IAdminService {
+
+}

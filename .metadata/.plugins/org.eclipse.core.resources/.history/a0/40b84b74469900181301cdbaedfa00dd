@@ -1,0 +1,26 @@
+package com.fyts.admin.modules.sys.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.baomidou.mybatisplus.plugins.Page;
+import com.fyts.admin.modules.sys.service.IAdminService;
+import com.fyts.core.common.base.Result;
+import com.fyts.core.common.base.ResultGenerator;
+import com.fyts.core.modules.sys.entity.Admin;
+
+@RestController(value="/admin")
+public class AdminContoller {
+	
+	@Autowired
+	private IAdminService adminService;
+	
+	@PostMapping("list")
+	@ResponseBody
+	public Result list(Page<Admin> page ) {
+		Page<Admin> data = adminService.selectPage(page);
+		return ResultGenerator.genSuccessResult(data);
+	}
+}

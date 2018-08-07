@@ -1,0 +1,7 @@
+package com.fyts.admin.modules.sys.impl;
+
+import com.fyts.admin.common.BaseServiceImpl;
+
+public class AdminServiceImp extends BaseServiceImpl<M, T> {
+
+}

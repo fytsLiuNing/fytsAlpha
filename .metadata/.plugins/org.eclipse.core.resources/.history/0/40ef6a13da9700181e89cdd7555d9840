@@ -1,0 +1,7 @@
+package com.fyts.core.common.base;
+
+public class SysEntity<T extends BaseEntity>  extends BaseEntity<T>{
+ 
+	
+ 
+}

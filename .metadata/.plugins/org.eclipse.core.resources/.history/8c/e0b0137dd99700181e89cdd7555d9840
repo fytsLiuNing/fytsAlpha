@@ -1,0 +1,11 @@
+package com.fyts.core.common.base;
+
+public class SysEntity<T extends BaseEntity>  extends BaseEntity<T>{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+ 
+}

@@ -1,0 +1,5 @@
+package com.fyts.core.common.base;
+
+public class BaseEntity {
+
+}

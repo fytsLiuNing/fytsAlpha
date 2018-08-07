@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="280" key="de.jcup.yamleditor.outline.YamlQuickOutlineDialogDIALOG_Y_ORIGIN"/>
+	<item value="true" key="de.jcup.yamleditor.outline.YamlQuickOutlineDialogDIALOG_USE_PERSISTED_LOCATION"/>
+	<item value="769" key="de.jcup.yamleditor.outline.YamlQuickOutlineDialogDIALOG_X_ORIGIN"/>
+	<item value="true" key="de.jcup.yamleditor.outline.YamlQuickOutlineDialogDIALOG_USE_PERSISTED_SIZE"/>
+	<item value="400" key="de.jcup.yamleditor.outline.YamlQuickOutlineDialogDIALOG_WIDTH"/>
+	<item value="366" key="de.jcup.yamleditor.outline.YamlQuickOutlineDialogDIALOG_HEIGHT"/>
+</section>

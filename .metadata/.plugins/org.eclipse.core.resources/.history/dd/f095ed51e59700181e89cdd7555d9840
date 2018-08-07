@@ -1,0 +1,9 @@
+package com.fyts.admin.modules.sys.impl;
+
+import com.fyts.admin.common.BaseServiceImpl;
+import com.fyts.core.modules.sys.entity.Admin;
+import com.fyts.core.modules.sys.mapper.AdminMapper;
+
+public class AdminServiceImp extends BaseServiceImpl<AdminMapper, Admin> {
+
+}

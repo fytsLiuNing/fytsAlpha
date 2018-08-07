@@ -1,0 +1,10 @@
+package com.fyts.admin.modules.sys.service;
+
+import org.springframework.stereotype.Component;
+
+import com.fyts.admin.common.IBaseService;
+import com.fyts.core.modules.sys.entity.Admin;
+
+public interface IAdminService extends IBaseService<Admin>{
+
+}

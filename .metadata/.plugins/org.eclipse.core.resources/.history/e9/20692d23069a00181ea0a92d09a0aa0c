@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+	<appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			 <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+			<PatternLayout pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %C:%L - [%logger{1}::%M] %msg%n}{FATAL=Bright Red, ERROR=Bright Magenta, WARN=Bright Yellow, INFO=Bright Green, DEBUG=Bright Cyan, TRACE=Bright White}" />
+		</Console>
+		<RollingFile name="file" fileName="logs/log.log" filePattern="logs/log-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %C:%L - [%logger{1}::%M] %msg%n" />
+			<SizeBasedTriggeringPolicy size="5M" />
+		</RollingFile>
+		<RollingFile name="sqlFile" fileName="logs/sqlLog.log" filePattern="logs/sqlLog-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %C:%L - [%logger{1}::%M] %msg%n" />
+			<SizeBasedTriggeringPolicy size="5M" />
+		</RollingFile>
+	</appenders>
+	<loggers>
+		<root level="info">
+			<appender-ref ref="console" />
+		</root>
+		<logger name="com.fyts" level="debug" additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file" />
+		</logger>
+		<logger name="org.apache.ibatis" level="debug" additivity="false">
+			<appender-ref ref="sqlFile" />
+		</logger>
+	</loggers>
+</Configuration>

@@ -1,0 +1,8 @@
+package com.fyts.core.common.base;
+
+import com.baomidou.mybatisplus.activerecord.Model;
+
+public class DataEntity<T extends Model> extends BaseEntity<T>  {
+	
+	 
+}

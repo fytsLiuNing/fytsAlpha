@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.fyts</groupId>
+  <artifactId>fyts-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>fyts-parent</name>
+  
+  
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.10.RELEASE</version>
+	</parent>
+  
+  <modules>
+    <module>fyts-common</module>
+    <module>fyts-modules-core</module>
+    <module>fyts-modules-admin</module>
+    <module>fyts-modules-api</module>
+  </modules>
+  
+  
+  <properties>
+	<!-- common version setting -->
+	<commons-lang3.version>3.4</commons-lang3.version>
+	<commons-io.version>2.5</commons-io.version>
+	<commons-fileupload.version>1.3.1</commons-fileupload.version>
+	<ruedigermoeller-fst.version>2.56</ruedigermoeller-fst.version>
+	<json.version>20170516</json.version>
+	<dozer.version>5.5.1</dozer.version>
+	<poi.version>3.14</poi.version>
+	
+	<!-- framework version setting -->
+	<mybatis.version>3.4.5</mybatis.version>
+	<mybatis-spring.version>1.3.1</mybatis-spring.version>
+	<jsqlparser.version>1.1</jsqlparser.version>
+	<druid.version>1.1.3</druid.version>
+	<shiro.version>1.4.0</shiro.version>
+	<beetl.version>2.7-SNAPSHOT</beetl.version>
+	<ehcache-web.version>2.0.4</ehcache-web.version>
+	<quartz.version>2.2.3</quartz.version>
+	
+	<!-- environment setting -->
+	<java.version>1.8</java.version>
+	<maven.test.skip>true</maven.test.skip> 
+	<eclipse-plugin-download-sources>false</eclipse-plugin-download-sources>
+	<eclipse-plugin-download-javadocs>false</eclipse-plugin-download-javadocs>
+  </properties>
+  
+  <dependencyManagement>
+  	<dependencies>
+		<!-- WEB begin -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- WEB end -->
+	</dependencies>
+  </dependencyManagement>
+   <dependency>
+     <groupId>junit</groupId>
+     <artifactId>junit</artifactId>
+     <version>3.8.1</version>
+     <scope>test</scope>
+   </dependency>
+  
+  <build>
+		<plugins>
+			
+		</plugins>
+	</build>
+	
+	<developers>  
+		<developer>
+			<id>fyts</id>
+			<name>Liuning</name>
+			<email>liuning at fengyangts.com</email>
+			<roles><role>Project lead</role></roles>
+			<timezone>+8</timezone>  
+		</developer>
+	</developers>
+	
+	<organization>
+		<name>fyts</name>
+		<url>http://fengyangts.com</url>
+	</organization>
+</project>

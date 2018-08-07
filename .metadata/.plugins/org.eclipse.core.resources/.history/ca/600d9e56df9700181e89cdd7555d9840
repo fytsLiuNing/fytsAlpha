@@ -1,0 +1,9 @@
+package com.fyts.core.modules.sys.mapper;
+
+import com.fyts.core.common.base.SuperMapper;
+import com.fyts.core.modules.sys.entity.Admin;
+
+public interface AdminMapper extends SuperMapper<Admin> {
+ 
+
+}

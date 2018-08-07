@@ -1,0 +1,37 @@
+1533179020699	Rename package 'org.fyts.modules.core'
+1533188708009	Rename package 'org.fyts.modules.core'
+1533196568168	Rename package 'com.fyts.modules.core'
+1533196742710	Delete element
+1533198354507	Rename package 'com.fyts.modules.dao'
+1533205437015	Rename package 'com.fyts.common.core.config'
+1533212990397	Copy file
+1533212995620	Delete element
+1533213005392	Copy file
+1533213014204	Copy file
+1533213064873	Copy files
+1533213079289	Delete elements
+1533215037087	Delete element
+1533215130589	Delete element
+1533215778185	Delete elements
+1533216619776	Rename package 'com.fyts'
+1533216723869	Copy package
+1533216845403	Copy compilation unit
+1533216847789	Copy compilation unit
+1533216851740	Copy compilation unit
+1533216860682	Delete element
+1533216929362	Delete element
+1533216939895	Delete element
+1533217080320	Delete elements
+1533283797038	Rename resource 'application-dev.yml'
+1533283802838	Delete element
+1533283812687	Rename resource 'application-test.yml'
+1533283822323	Rename resource 'application-pro.yml'
+1533286946042	Rename resource 'core-pro.yml'
+1533288095925	Rename package 'com.fyts.core.modules.entity'
+1533288112346	Rename package 'com.fyts.core.modules.mapper'
+1533381951239	Copy compilation unit
+1533381962314	Copy compilation unit
+1533384023956	Copy compilation unit
+1533384038772	Rename type 'Admin'
+1533388730335	Rename package 'com.fyts.admin.common.core'
+1533388753797	Move compilation units

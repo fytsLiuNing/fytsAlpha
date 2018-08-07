@@ -1,0 +1,14 @@
+package com.fyts.core.common.base;
+
+import com.baomidou.mybatisplus.activerecord.Model;
+
+/**
+ * 业务基础实体类
+ * @author liuning
+ *
+ * @param <T>
+ */
+public class DataEntity<T extends Model> extends BaseEntity<T>  {
+	
+	 
+}

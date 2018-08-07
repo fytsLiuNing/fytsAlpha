@@ -1,0 +1,26 @@
+package com.fyts.core.common.base;
+
+
+/**
+ * 后台管理系统基础实体类
+ * @author liuning
+ *
+ * @param <T>
+ */
+public class SysEntity<T extends BaseEntity>  extends BaseEntity<T>{
+
+	@Override
+	public void preInsert() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void preUpdate() {
+		// TODO Auto-generated method stub
+		
+	}
+ 
+	
+ 
+}

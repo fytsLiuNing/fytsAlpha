@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="fyts-common" />
+        <module name="fyts-modules-admin" />
+        <module name="fyts-modules-api" />
+        <module name="fyts-modules-core" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

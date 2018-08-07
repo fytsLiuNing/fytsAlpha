@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.fyts</groupId>
+    <artifactId>fyts-parent</artifactId>
+    <version>${fyts.version}</version>
+  </parent>
+  <artifactId>fyts-modules-admin</artifactId>
+  <name>fyts-modules-admin</name>
+  <dependencies>
+  	<dependency>
+		 <groupId>com.fyts</groupId>
+		 <artifactId>fyts-common</artifactId>
+		 <version>${fyts.version}</version>
+	</dependency>
+  	
+  	<dependency>
+		 <groupId>com.fyts</groupId>
+		 <artifactId>fyts-core</artifactId>
+		 <version>${fyts.version}</version>
+	</dependency>
+  	
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-web</artifactId>
+     </dependency>
+	 <dependency>
+         <groupId>com.baomidou</groupId>
+         <artifactId>mybatis-plus</artifactId>
+         <version>${mybatis-plus.version}</version>
+     </dependency>
+    
+  </dependencies>
+  
+</project>

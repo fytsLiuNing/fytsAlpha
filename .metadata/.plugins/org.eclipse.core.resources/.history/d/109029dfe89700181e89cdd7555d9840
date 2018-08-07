@@ -1,0 +1,5 @@
+package com.fyts.admin.common.configure;
+
+public class WebMvcConfig {
+
+}

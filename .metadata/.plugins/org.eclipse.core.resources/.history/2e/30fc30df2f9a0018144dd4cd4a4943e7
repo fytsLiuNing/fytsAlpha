@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master,如果你主从默认下主库的名称就是master可不定义此项。
+      datasource:
+        master:
+          username: root
+          password: fengyangtsdb
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/fyts?characterEncoding=utf8&useSSL=false
+        slave_1:
+          username: root
+          password: fengyangtsdb
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/fyts?characterEncoding=utf8&useSSL=false
+      

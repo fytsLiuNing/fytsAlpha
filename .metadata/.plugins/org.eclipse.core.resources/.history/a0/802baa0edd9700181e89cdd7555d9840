@@ -1,0 +1,7 @@
+package com.fyts.core.modules.sys.entity;
+
+import com.fyts.core.common.base.SysEntity;
+
+public class Admin extends SysEntity<T> {
+
+}

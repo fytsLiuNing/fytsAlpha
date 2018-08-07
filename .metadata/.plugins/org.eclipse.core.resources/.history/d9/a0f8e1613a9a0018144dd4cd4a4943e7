@@ -1,0 +1,71 @@
+package com.fyts.admin.common.configure;
+
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.beetl.core.resource.WebAppResourceLoader;
+import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
+import org.beetl.ext.spring.BeetlSpringViewResolver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternUtils;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.NoHandlerFoundException;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.support.config.FastJsonConfig;
+import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
+import com.fyts.core.common.base.Result;
+import com.fyts.core.common.base.ResultCode;
+import com.fyts.core.common.exception.ServiceException;
+import com.fyts.core.common.exception.UnauthenticatedException;
+
+@Configuration
+public class BeetlConfi{
+
+	@Bean(initMethod = "init", name = "beetlConf")
+	public BeetlGroupUtilConfiguration getBeetlGroupUtilConfiguration() {
+		BeetlGroupUtilConfiguration beetlGroupUtilConfiguration = new BeetlGroupUtilConfiguration();
+		ResourcePatternResolver patternResolver = ResourcePatternUtils
+				.getResourcePatternResolver(new DefaultResourceLoader());
+		try {
+			WebAppResourceLoader cploder = new WebAppResourceLoader(patternResolver.getResource("classpath:/").getFile().getPath());
+			beetlGroupUtilConfiguration.setResourceLoader(cploder);
+			return beetlGroupUtilConfiguration;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+ 
+	}
+ 
+	@Bean(name = "beetlViewResolver")
+	public BeetlSpringViewResolver getBeetlSpringViewResolver(
+			@Qualifier("beetlConf") BeetlGroupUtilConfiguration beetlGroupUtilConfiguration) {
+		BeetlSpringViewResolver beetlSpringViewResolver = new BeetlSpringViewResolver();
+		beetlSpringViewResolver.setContentType("text/html;charset=UTF-8");
+		beetlSpringViewResolver.setPrefix("/WEB-INF/view/modules");
+		beetlSpringViewResolver.setSuffix(".html");
+		beetlSpringViewResolver.setOrder(0);
+		beetlSpringViewResolver.setConfig(beetlGroupUtilConfiguration);
+		return beetlSpringViewResolver;
+	}
+
+}

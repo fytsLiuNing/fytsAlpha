@@ -1,0 +1,29 @@
+package com.fyts.admin;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@SpringBootApplication
+@EnableTransactionManagement
+@ComponentScan({"com.fyts.core","com.fyts.admin","com.fyts.common"})
+public class AdminApplication {
+	
+	protected final static Logger logger = LoggerFactory.getLogger(AdminApplication.class);
+    
+//	@Value("spring.datasource.dynamic.primary")
+	@Value("server.port")
+	protected  static String eeee;
+	
+    public static void main(String[] args) {
+    	System.out.println(eeee);
+        SpringApplication app = new SpringApplication(AdminApplication.class);
+//        app.setBannerMode(Banner.Mode.OFF);
+        app.run(args);
+    }
+}

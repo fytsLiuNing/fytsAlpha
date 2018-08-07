@@ -1,0 +1,14 @@
+package com.fyts.core.common.base;
+
+
+/**
+ * 后台管理系统基础实体类
+ * @author liuning
+ *
+ * @param <T>
+ */
+public abstract class SysEntity<T extends BaseEntity>  extends BaseEntity<T>{
+ 
+	
+ 
+}

@@ -1,0 +1,26 @@
+server:
+  port: 8081
+  path: /
+spring:
+  profiles:
+    active: dev
+    
+ 
+#热部署
+devtools:
+  restart:
+    enabled: true #热部署生效
+    #设置重启的目录
+    additional-paths: src/main/java
+    exclude: web/** #classpath目录下的WEB-INF文件夹内容修改不重启
+    
+#日志配置文件
+logging:
+  config: classpath:log4j2.xml
+  
+beetlsql:
+   enabled: false
+beetl:
+   enabled: true
+   
+         

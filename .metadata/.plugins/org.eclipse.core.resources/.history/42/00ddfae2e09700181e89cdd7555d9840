@@ -1,0 +1,5 @@
+package com.fyts.admin.common;
+
+public class IBaseService {
+
+}
